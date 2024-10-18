@@ -100,14 +100,14 @@ form {
     margin-bottom: 25px;
 }
 
-.price-container
+.price-order-container
 {
     display: flex; 
     justify-content: space-between; 
     margin-bottom: 15px;
 }
 
-.price-container > span
+.price-order-container > span
 {
     font-family: var(--font-montserrat-banner-text);
     font-weight: 500;
@@ -211,6 +211,24 @@ button[type="submit"]:hover {
 .promoCode.active
 {
     display: block;
+}
+.alert-danger
+{
+    font-family: var(--font-montserrat-banner-text);
+    font-weight: 500;
+    font-size: 11px;
+    color: red;
+    margin-bottom: 5px;
+}
+.success
+{
+    text-align: center;
+    width: 100%;
+    font-family: var(--font-montserrat-banner-text);
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 3vh;
+    color: green;
 }
 /* Responsive Design */
 @media (max-width: 768px) {

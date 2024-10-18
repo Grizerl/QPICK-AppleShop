@@ -1,26 +1,25 @@
 <?php
 
 namespace App\Http\Controllers\Order;
-
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\PromoCode;
-use Illuminate\Http\Request;
+
+use function Laravel\Prompts\select;
 
 class OrderController extends Controller
 {
-    public function order($id)
+    public function order(Request $request, $id)
     {
-
         $categories = Category::with('subcategories')->get();
+        
+        $product = Product::findOrFail($id);
+        
+        $randomNumber = rand(500, 1500);
 
-        $product=Product::findOrFail($id);
-
-        $randomNumber = rand(500, 5000);
-
-        $promoCode = PromoCode::all();
-
-        return view('OrderProduct.order',compact('product','categories','randomNumber','promoCode'));
+        return view('OrderProduct.order', compact('product', 'categories', 'randomNumber'));   
     }
 }
