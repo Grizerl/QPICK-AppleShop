@@ -53,9 +53,9 @@
                         @endif
                     </div>
                     <button type="submit" class="btn-input">Закінчити оформлення</button>
-                    @if (session('success'))
+                    <!-- @if (session('success'))
                         <div class="success">{{ session('success') }}</div>
-                    @endif
+                    @endif -->
               </div>
             </div>
             <div style="flex: 1; background-color: #fff; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); padding: 20px;">

@@ -4,10 +4,16 @@
     --clr-white-banner-text: #FFFFFF;
     --clr-card-product:#1d1d1d;
     --clr-ellipse: #FFA542;
+    --clr-main-container:#f9f9f9;
+    --clr-border-main-container:#ddd;
     --clr-box-card: #0000001A;
+    --clr-not-availability:#d9534f;
     --clr-title-card: #1C1C27;
+    --clr-availability:#5cb85c;
     --clr-title--scroll: #838383;
     --clr-old--price: #FFCE7F;
+    --clr-list:#333;
+    --clr-part-number:#999;
     --clr-footer-text: #000000;
     --clr-footer-item: #101010;
     --clr-i-fa-globe: #838383;
@@ -28,8 +34,8 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: var(--clr-main-container);
+    border: 1px solid var(--clr-border-main-container);
     border-radius: 8px 8px 0px 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px 25px;
@@ -40,7 +46,7 @@
     font-family: var(--font-montserrat-banner-text);
     font-weight: 700;
     font-size: 17px;
-    color: #333;
+    color: var(--clr-list);
     transition: .3s;
     white-space: nowrap;
     background-clip: content-box;
@@ -54,16 +60,16 @@
     font-size: 14px;
     line-height: 19px;
     text-align: right;
-    color: #999;
+    color: var(--clr-part-number);
 }
 /* ---- Product Content ---- */
 .product-container {
     display: flex;
     flex-direction: row;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--clr-border-main-container);
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: var(--clr-main-container);
     max-width: 1200px;
     margin: 2.1vh auto 5.5vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -91,18 +97,18 @@
     font-size: 26px;
     font-weight: 700;
     word-spacing: 3.5px;
-    color: #333;
+    color: var(--clr-list);
     margin-bottom: 10px;
 }
 
 .product-availability {
     font-size: 19px;
-    color: #d9534f; 
+    color: var(--clr-not-availability); 
 }
 
 .product-availability.in-stock {
     font-size: 19px;
-    color: #5cb85c; 
+    color: var(--clr-availability); 
 }
 
 .price-container {

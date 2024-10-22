@@ -28,7 +28,7 @@
 
         <div class="product-container">
             <div class="img-container">
-                <img src="{{ $product->image }}" alt="Product Image">
+                <img src="{{ $product->image }}" alt="Product Image" title="{{$product->name}}">
             </div>
             <div class="product-details">
                 <div class="product-title">

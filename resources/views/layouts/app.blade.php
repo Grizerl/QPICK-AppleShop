@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../../../assets/css/index.css" type="text/css">
     <link rel="stylesheet" href="../../../assets/css/show/products.css" type="text/css">
     <link rel="stylesheet" href="../../../../assets/css/order/order.css" type="text/css">
+    <link rel="stylesheet" href="../../../../../assets/css/order/reserved.css" type="text/css">
     <link rel="icon" type="image/png" href="../../../../assets/images/StoreLogo/AppleLogo.png" title="Apple Logo">
     <!------->
     <!--Google Fonts-->
@@ -50,7 +51,9 @@
     <div class="footer-top-product">
         <div class="wrap-container">
             <div class="wrap-container-image">
+            <a href="{{route('categories.index')}}">
                 <img src="../../../../assets/images/StoreLogo/QPICK.png" alt="Hardware store logo">
+            </a>
             </div>
             <div>
                 <ul class="second-nav">

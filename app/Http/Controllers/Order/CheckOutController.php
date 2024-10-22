@@ -25,6 +25,6 @@ class CheckOutController extends Controller
         $order->paymentMethod = $validatedData['paymentMethod']; 
         $order->save();
 
-        return redirect()->back()->with('success', 'Дані успішно передані');
+        return redirect(route('checkout.reserved'))->with('success', 'Дані успішно передані');
     }
 }

@@ -16,7 +16,7 @@
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <a class="scroll--item" href="{{route('subcategories.detaile',$product['id'])}}">
-                            <img class="scroll--img" src="{{ $product->image ? $product->image : asset('./assets/images/noimage.jpg') }}" alt="{{ $product->name }}" loading="lazy">
+                            <img class="scroll--img" src="{{ $product->image ? $product->image : asset('./assets/images/noimage.jpg') }}" alt="{{ $product->name }}" loading="lazy" title="{{$product->name}}">
                             <div class="card--container--item">
                                 <div class="scroll--card--info">
                                     <h3>{{ $product->name }}</h3>

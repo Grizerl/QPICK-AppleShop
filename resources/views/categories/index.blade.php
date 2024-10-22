@@ -22,7 +22,7 @@
         <div class="advertising-line">
             <div class="advertising-container">
                 <div>
-                    <img src="./assets/images/AdvertisingBanner/iPhone-13-Pro-Max.png" alt="Banner on the main part">
+                    <img src="./assets/images/AdvertisingBanner/iPhone-13-Pro-Max.png" alt="Banner on the main part" title="Banner on the main part">
                 </div>
             </div>
             <div>
@@ -35,26 +35,26 @@
     <div>
         <div class="scroll--container">
             <div class="container--title">
-                <h2>Чохли</h2>
+                <h2>Dyson</h2>
             </div>
             <div class="scroll--container">
                <ul class="scroll--container--desktop">
                     <li class="scroll--list">
-                        <a class="scroll--item" href="#">
-                            <img src="/assets/images/covers/Glass.png" alt="Cover" loading="lazy">
-                            <span class="scroll--type--cover">Скляні</span>
+                        <a class="scroll--item" href="{{route('dyson.index')}}">
+                            <img src="/assets/images/Dyson/stylers/stailerdysonbg11.webp" alt="Dyson stylers" loading="lazy" title="Dyson stylers">
+                            <span class="scroll--type--cover">Стайлери</span>
                         </a>
                     </li>
                     <li class="scroll--list">
-                        <a class="scroll--item" href="#">
-                            <img src="/assets/images/covers/MellowYellow.png" alt="Cover" loading="lazy">
-                            <span class="scroll--type--cover">Силіконові</span>
+                        <a class="scroll--item" href="{{route('dyson.hair.dryer')}}">
+                            <img src="/assets/images/Dyson/hairDryers/hairDryers10.webp" alt="Dyson hair dryer" loading="lazy" title="Dyson hair dryer">
+                            <span class="scroll--type--cover">Фени</span>
                         </a>
                     </li>
                     <li class="scroll--list">
-                        <a class="scroll--item" href="#">
-                            <img src="/assets/images/covers/Black.png" alt="Cover" loading="lazy">
-                            <span class="scroll--type--cover">Шкіряні</span>
+                        <a class="scroll--item" href="{{route('dyson.rectifiers')}}">
+                            <img src="/assets/images/Dyson/rectifiers/rectifiers5.webp" alt="Dyson rectifiers" loading="lazy" title="Dyson rectifiers">
+                            <span class="scroll--type--cover">Випрямлячі</span>
                         </a>
                     </li>
                </ul>
@@ -199,68 +199,26 @@
     <aside>
     <div class="scroll--container">
             <div class="container--title">
-                <h2>Бездротові навушники</h2>
+                <h2>Консолі та геймінг</h2>
             </div>
             <div class="scroll--container">
                <ul class="scroll--container--desktop">
-                    <li class="scroll--list sc-lt-head">
-                        <div class="select-container">   
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                        <a class="scroll--item" href="#">
-                            <img class="scroll--img" src="/assets/images/headphone/bluetooth/AirPods_2.png" alt="HeadphoneLighting" loading="lazy">
-                            <div class="card--container--item">
-                                <div class="scroll--card--info">
-                                    <h3>Apple AirPods</h3>
-                                    <div class="scroll--card-info">
-                                        <i class="fa-solid fa-star st-rate"></i>
-                                        <span class="rate">4.7</span>
-                                    </div>
-                                </div>
-                                <div class="scroll--card--price">
-                                    <span class="price">9527 UAH</span>
-                                </div>
-                            </div>
+                    <li class="scroll--list">
+                        <a class="scroll--item" href="{{route('console.index')}}">
+                            <img src="/assets/images/Console/consoleGaming/console.webp" alt="Console for gaming" loading="lazy" title="Console for gaming">
+                            <span class="scroll--type--cover">Ігрові консолі</span>
                         </a>
                     </li>
-                    <li class="scroll--list sc-lt-head">
-                    <div class="select-container">   
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <a class="scroll--item" href="#">
-                            <img class="scroll--img" src="/assets/images/headphone/bluetooth/AirPodsPro.png" alt="HeadphoneLighting" loading="lazy">
-                            <div class="card--container--item">
-                                <div class="scroll--card--info">
-                                    <h3>GERLAX GH-04</h3>
-                                    <div class="scroll--card-info">
-                                        <i class="fa-solid fa-star st-rate"></i>
-                                        <span class="rate">4.6</span>
-                                    </div>
-                                </div>
-                                <div class="scroll--card--price">
-                                    <span class="price">6527 UAH</span>
-                                </div>
-                            </div>
+                    <li class="scroll--list">
+                        <a class="scroll--item" href="{{route('console.accessories')}}">
+                            <img src="/assets/images/Console/accessories/accessories.webp" alt="Accessories for console" loading="lazy" title=""Accessories for console">
+                            <span class="scroll--type--cover">Для консолей</span>
                         </a>
                     </li>
-                    <li class="scroll--list sc-lt-head">
-                    <div class="select-container">   
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <a class="scroll--item" href="#">
-                            <img class="scroll--img" src="/assets/images/headphone/bluetooth/Borofone.png" alt="HeadphoneLighting" loading="lazy">
-                            <div class="card--container--item">
-                                <div class="scroll--card--info">
-                                    <h3>BOROFONE BO4</h3>
-                                    <div class="scroll--card-info">
-                                        <i class="fa-solid fa-star st-rate"></i>
-                                        <span class="rate">5.0</span>
-                                    </div>
-                                </div>
-                                <div class="scroll--card--price">
-                                    <span class="price">7527 UAH</span>
-                                </div>
-                            </div>
+                    <li class="scroll--list">
+                        <a class="scroll--item" href="{{route('console.games')}}">
+                            <img src="/assets/images/Console/games/games5.webp" alt="Games gta 5" loading="lazy" title="Games gta 5">
+                            <span class="scroll--type--cover">Ігри</span>
                         </a>
                     </li>
                </ul>
