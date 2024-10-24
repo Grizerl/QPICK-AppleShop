@@ -9,12 +9,20 @@
     <link rel="stylesheet" href="../../../../assets/css/order/order.css" type="text/css">
     <link rel="stylesheet" href="../../../../../assets/css/order/reserved.css" type="text/css">
     <link rel="icon" type="image/png" href="../../../../assets/images/StoreLogo/AppleLogo.png" title="Apple Logo">
-    <!------->
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!---------------->
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!---------------->
+    <!--Swiper-->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!----------->
     <title>@yield('title')</title>
 </head>
 <body>
@@ -107,8 +115,9 @@
     </div>
 </footer>
 <script src="/assets/js/productSelect.js"></script>
-<script src="https://kit.fontawesome.com/46a432ef36.js" crossorigin="anonymous"></script>
+<script src="/assets/js/swiper.js"></script>
 <script src="/assets/js/showCard/card.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../../../../assets/js/orderBy/order.js"></script>
 </body>
 </html>

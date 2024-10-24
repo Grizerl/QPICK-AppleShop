@@ -28,4 +28,3 @@ Route::group(['prefix' => 'Qpick'], function() {
     Route::get('/console-and-gaming/console/games', [App\Http\Controllers\Console\ConsoleGamingController::class, 'games'])->name('console.games');
 
 });
-

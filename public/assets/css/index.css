@@ -114,6 +114,10 @@ a
     color: var(--clr-white-banner-text);
 }
 /* ---- Products ---- */
+.scroll--container
+{
+    width: 100%;
+}
 .container--title
 {
     width: 50%;
@@ -130,6 +134,19 @@ a
     font-weight: 600;
     line-height: 24.38px;
     color: var(--clr-title--scroll);
+}
+.swiper
+{
+    width: 70%;
+    height: 100%;
+}
+.swiper-slide
+{
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .scroll--container--desktop,.scroll--item
 {
@@ -334,4 +351,3 @@ a
     color: var(--clr-footer-item);
     cursor: pointer;
 }
-
