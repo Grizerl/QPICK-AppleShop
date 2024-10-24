@@ -28,7 +28,7 @@
 
         <div class="product-container">
             <div class="img-container">
-                <img src="{{ $product->image }}" alt="Product Image" title="{{$product->name}}">
+                <img src="{{ $product->image }}" alt="{{$product->name}}" title="{{$product->name}}">
             </div>
             <div class="product-details">
                 <div class="product-title">
@@ -83,8 +83,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="color-options">
+                    <div class="color-options">
                     <h1>Колір</h1>
+                    @if($product->subcategory->category->name === 'Apple iPhone')
                     <div class="colors">
                         <span class="color" style="background-color: #000000;"></span>
                         <span class="color" style="background-color: #ffffff;"></span>
@@ -93,8 +94,55 @@
                         <span class="color" style="background-color: #9fe2ca;"></span>
                         <span class="color" style="background-color: #2f466b;"></span>
                     </div>
+                    @elseif($product->subcategory->category->name === 'Apple AirPods')
+                    <div class="colors">
+                        <span class="color" style="background-color: #9fe2ca;"></span>
+                        <span class="color" style="background-color: #ffffff;"></span>
+                        <span class="color" style="background-color: #62615f;"></span>
+                        <span class="color" style="background-color: #e9e9e1;"></span>
+                        <span class="color" style="background-color: #e6b3b0;"></span>
+                        <span class="color" style="background-color: #9cafbf;"></span>
+                    </div>
+                    @elseif($product->subcategory->category->name === 'Apple Mac')
+                    <div class="colors">
+                        <span class="color" style="background-color: #0d1b3a;"></span>
+                        <span class="color" style="background-color: #62615f;"></span>
+                        <span class="color" style="background-color: #e9e9e1;"></span>
+                        <span class="color" style="background-color: #ffffff;"></span>
+                    </div>
+                    @elseif($product->subcategory->category->name === 'Dyson')
+                    <div class="colors">
+                        <span class="color" style="background-color: #eba832;"></span>
+                        <span class="color" style="background-color: #b0b3ad;"></span>
+                        <span class="color" style="background-color: #3e197a;"></span>
+                        <span class="color" style="background-color: #f8522f;"></span>
+                        <span class="color" style="background-color: #2fccce;"></span>
+                        <span class="color" style="background-color: #0a0a0b;"></span>
+                        <span class="color" style="background-color: #3d5890;"></span>
+                        <span class="color" style="background-color: #d8b19e;"></span>
+                    </div>
+                    @elseif($product->subcategory->category->name === 'Console and Gaming')
+                    <div class="colors">
+                        <span class="color" style="background-color: #0aa8ef;"></span>
+                        <span class="color" style="background-color: #ffffff;"></span>
+                        <span class="color" style="background-color: #e40d0d;"></span>
+                        <span class="color" style="background-color: #494bd4;"></span>
+                        <span class="color" style="background-color: #e6b3b0;"></span>
+                        <span class="color" style="background-color: #000000;"></span>
+                    </div>
+                    @elseif($product->subcategory->category->name === 'Apple Watch')
+                    <div class="colors">
+                        <span class="color" style="background-color: #000000;"></span>
+                        <span class="color" style="background-color: #ffffff;"></span>
+                        <span class="color" style="background-color: #41454f;"></span>
+                        <span class="color" style="background-color: #ee4c17;"></span>
+                        <span class="color" style="background-color: #c4beb8;"></span>
+                        <span class="color" style="background-color: #223444;"></span>
+                    </div>
+                    @endif
                 </div>
-                <div class="storage-options">
+                @if($product->subcategory->category->name === 'Apple iPhone' || $product->subcategory->category->name === 'Apple Mac')
+                    <div class="storage-options">
                     <h1>Ємність</h1>
                     <div class="storages">
                         <a href="#"><label>64GB</label></a>
@@ -103,6 +151,17 @@
                         <a href="#"><label>512GB</label></a>
                     </div>
                 </div>
+                @elseif($product->subcategory->category->name === 'Apple Watch')
+                <div class="storage-options">
+                    <h1>Ємність</h1>
+                    <div class="storages">
+                        <a href="#"><label>40mm</label></a>
+                        <a href="#"><label>42mm</label></a>
+                        <a href="#"><label>44mm</label></a>
+                        <a href="#"><label>46mm</label></a>
+                    </div>
+                </div>
+                @endif
                 <div class="benefits">
                     <h1>Наші переваги</h1>
                     <div class="benefit-list">

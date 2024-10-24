@@ -5,6 +5,7 @@ namespace App\Http\Controllers\ShowProductsDetaile;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
 class DetaileController extends Controller

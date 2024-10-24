@@ -40,19 +40,19 @@
             <div class="scroll--container">
                <ul class="scroll--container--desktop">
                     <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('dyson.index')}}">
+                        <a class="scroll--item" href="{{route('subcategories.show',28)}}">
                             <img src="/assets/images/Dyson/stylers/stailerdysonbg11.webp" alt="Dyson stylers" loading="lazy" title="Dyson stylers">
                             <span class="scroll--type--cover">Стайлери</span>
                         </a>
                     </li>
                     <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('dyson.hair.dryer')}}">
+                        <a class="scroll--item" href="{{route('subcategories.show',29)}}">
                             <img src="/assets/images/Dyson/hairDryers/hairDryers10.webp" alt="Dyson hair dryer" loading="lazy" title="Dyson hair dryer">
                             <span class="scroll--type--cover">Фени</span>
                         </a>
                     </li>
                     <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('dyson.rectifiers')}}">
+                        <a class="scroll--item" href="{{route('subcategories.show',30)}}">
                             <img src="/assets/images/Dyson/rectifiers/rectifiers5.webp" alt="Dyson rectifiers" loading="lazy" title="Dyson rectifiers">
                             <span class="scroll--type--cover">Випрямлячі</span>
                         </a>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="swiper-slide">
                         <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('subcategories.detaile',318)}}"">
+                        <a class="scroll--item" href="{{route('subcategories.detaile',388)}}"">
                             <img class="scroll--img" src="/assets/images/AirPods/AirPods4.webp" alt="AirPods 4" tutitle="AirPods 4" loading="lazy">
                             <div class="card--container--item">
                                 <div class="scroll--card--info">
@@ -126,7 +126,7 @@
                     </div>
                     <div class="swiper-slide">
                         <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('subcategories.detaile',319)}}"">
+                        <a class="scroll--item" href="{{route('subcategories.detaile',389)}}"">
                             <img class="scroll--img" src="/assets/images/AirPods/AirPods 2.webp" alt="AirPods 2" title="AirPods 2" loading="lazy">
                             <div class="card--container--item">
                                 <div class="scroll--card--info">
@@ -183,7 +183,7 @@
                     </div>
                     <div class="swiper-slide">
                         <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('subcategories.detaile',322)}}"">
+                        <a class="scroll--item" href="{{route('subcategories.detaile',387)}}"">
                             <img class="scroll--img" src="/assets/images/AirPods/AirPods Max Red.webp" alt="AirPods Max Red" title="AirPods Max Red" loading="lazy">
                             <div class="card--container--item">
                                 <div class="scroll--card--info">
@@ -352,19 +352,19 @@
             <div class="scroll--container">
                <ul class="scroll--container--desktop">
                     <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('console.index')}}">
+                        <a class="scroll--item" href="{{route('subcategories.show',34)}}">
                             <img src="/assets/images/Console/consoleGaming/console.webp" alt="Console for gaming" loading="lazy" title="Console for gaming">
                             <span class="scroll--type--cover">Ігрові консолі</span>
                         </a>
                     </li>
                     <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('console.accessories')}}">
+                        <a class="scroll--item" href="{{route('subcategories.show',35)}}">
                             <img src="/assets/images/Console/accessories/accessories.webp" alt="Accessories for console" loading="lazy" title=""Accessories for console">
                             <span class="scroll--type--cover">Для консолей</span>
                         </a>
                     </li>
                     <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('console.games')}}">
+                        <a class="scroll--item" href="{{route('subcategories.show',36)}}">
                             <img src="/assets/images/Console/games/games5.webp" alt="Games gta 5" loading="lazy" title="Games gta 5">
                             <span class="scroll--type--cover">Ігри</span>
                         </a>
