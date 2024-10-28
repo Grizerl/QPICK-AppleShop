@@ -350,6 +350,9 @@
         </div>
     </div>
 @endforeach
+    <div class="pagination-container">
+        {{ $reviews->links() }}
+    </div>
 </section>
 
 <script>

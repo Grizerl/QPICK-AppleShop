@@ -17,7 +17,7 @@ class DetaileController extends Controller
 
         $product=Product::findOrFail($id);
 
-        $reviews =review::all();
+        $reviews =review::paginate(3);
         
         return view('ShowProducts.product',compact('product','categories','reviews'));
     }
