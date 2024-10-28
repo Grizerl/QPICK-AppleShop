@@ -118,6 +118,7 @@
 <script src="/assets/js/swiper.js"></script>
 <script src="/assets/js/showCard/card.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../../../assets/js/Review/review-helpful.js"></script>
 <script src="../../../../assets/js/orderBy/order.js"></script>
 </body>
 </html>

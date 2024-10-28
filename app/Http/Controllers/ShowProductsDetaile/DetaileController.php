@@ -5,6 +5,7 @@ namespace App\Http\Controllers\ShowProductsDetaile;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\review;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,9 @@ class DetaileController extends Controller
         $categories = Category::with('subcategories')->get();
 
         $product=Product::findOrFail($id);
+
+        $reviews =review::all();
         
-        return view('ShowProducts.product',compact('product','categories'));
+        return view('ShowProducts.product',compact('product','categories','reviews'));
     }
 }

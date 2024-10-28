@@ -71,7 +71,7 @@
     border-radius: 10px;
     background-color: var(--clr-main-container);
     max-width: 1200px;
-    margin: 2.1vh auto 5.5vh;
+    margin: 2.1vh auto 0vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -92,13 +92,13 @@
     line-height: 1.5;
 }
 
-.product-title h1 {
+.title-section {
     font-family: var(--font-montserrat-banner-text);
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 20px !important;
+    font-weight: 500;
     word-spacing: 3.5px;
+    margin: 2.5vh 0vh 2.5vh 3.5vh;
     color: var(--clr-list);
-    margin-bottom: 10px;
 }
 
 .product-availability {
@@ -383,4 +383,289 @@ form
 
 .main-but:hover:before {
 	height: 42px;
+}
+/* ---- Description ---- */
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+.rotate {
+    transform: rotate(180deg);
+}
+.product-landing {
+    padding: 20px;
+    color: var(--clr-list);
+}
+
+.product-characteristic-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 64%;
+    margin: 0 auto;
+}
+.product-title-section
+{
+    border-radius: 10px;
+    background-color: var(--clr-white-banner-text);
+}
+.product-title h2 {
+    font-size: 1.75rem;
+    color: var(--clr-list);
+}
+
+.product-info {
+    padding: 20px 0;
+    border-bottom: 1px solid hsla(0, 0%, 60%, .5);
+}
+.product-main-characteristics
+{
+    line-height: 1.5;
+    padding: 33px;
+    border-radius: 10px;
+    background-color: var(--clr-white-banner-text);
+}
+.product-name h2 {
+    font-family: var(--font-montserrat-banner-text);
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    margin: 15px 0px;
+    color: var(--clr-list);
+   
+}
+
+.product-description p {
+    font-family: Gotham Pro, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.42857143;
+    padding: 0px 20px 8px 20px;
+    color: var(--clr-list);
+}
+
+.product-image figure {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 30px 0px;
+}
+.product-specs-title
+{
+    padding: 0px 25px;
+}
+.product-specs-title h2 {
+    font-family: var(--font-montserrat-banner-text);
+    font-weight: 600;
+    font-size: 21px !important;
+    margin-bottom: 20px;
+    color: var(--clr-list);
+    text-align: left;
+}
+
+.product-specs-list {
+    font-family: Gotham Pro, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    list-style: disc;
+    line-height: 2.4;
+    padding-left: 20px;
+    color: var(--clr-list);
+}
+
+.product-main-characteristics h2 {
+    font-family: var(--font-montserrat-banner-text);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--clr-list);
+}
+
+.product-info-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid hsla(0, 0%, 60%, .5);
+}
+
+.product-info-line div {
+    font-family: Gotham Pro, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--clr-list);
+}
+
+.bottom-line {
+    border-top: 1px solid hsla(0, 0%, 60%, .5);
+    margin: 20px 0;
+}
+/* ---- Rewievs ---- */
+.wrapp-product__rewievs
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--clr-white-banner-text);
+    padding: 4vh 0vh;
+    width: 62.5%;
+}
+.top-block-review
+{
+    text-align: center;
+}
+.wrapp-product__rewievs-title
+{
+    font-family: var(--font-montserrat-banner-text);
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--clr-list);
+    margin-bottom: 12px;
+}
+.wrapp-product__rewievs-subtitle
+{
+    margin-right: 15px;
+    font-family: var(--font-montserrat-banner-text);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: var(--clr-list);
+}
+.fa-star
+{
+    margin: 0;
+    color: var(--clr-ellipse);
+}
+.form--review
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+}
+.review-name
+{
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #1d1d1d;
+    height: 45px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--clr-white-banner-text);
+    text-align: left;
+    width: 100%;
+    padding: 20px 40px 20px 40px;
+    margin-bottom: 8px;
+}
+.review-name::placeholder
+{
+    color: var(--clr-white-banner-text);
+}
+input[type=text] {
+    color: var(--clr-white-banner-text);
+    font-size: 16px;
+    width: 100%;
+}
+.input-review{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: #1d1d1d;
+    height: 117px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--clr-white-banner-text);
+    text-align: left;
+    padding: 10px 11px 20px 40px;
+    width: 100%;
+    outline: 0;
+    margin-bottom: 5px;
+    resize: none;
+}
+.input-review::placeholder
+{
+    color: var(--clr-white-banner-text);
+}
+#submit--review
+{
+    border: 2px solid #1d1d1d;
+    background: transparent;
+    color: #1d1d1d;
+    font-family: var(--font-montserrat-banner-text);
+    font-size: 15px;
+    font-weight: 700;
+    transition: .5s;
+}
+#submit--review:hover
+{
+    color: var(--clr-white-banner-text);
+    background: var(--clr-ellipse);
+    border: 2px solid var(--clr-white-banner-text);
+}
+/* ---- Client ---- */
+.review-section {
+    padding: 20px;
+    width: 100%;
+}
+
+.review-container {
+    width: 64%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.review {
+    text-align: left;
+}
+
+.review-author {
+    font-family: var(--font-montserrat-banner-text);
+    font-size: 2.1rem;
+    font-weight: 700;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.review-stars {
+    color: #FFD700; 
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.review-text p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.review-helpful {
+    font-size: 1.3rem;
+    font-family: var(--font-montserrat-banner-text);
+    font-weight: 600;
+    color: green;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.alert-danger
+{
+    font-family: var(--font-montserrat-banner-text);
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--clr-hover-btn);
+    margin-bottom: 10px;
 }
