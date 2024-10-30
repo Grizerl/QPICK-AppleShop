@@ -1,0 +1,117 @@
+:root
+{
+    --clr-body: #EAEAEA;
+    --clr-white-banner-text: #FFFFFF;
+    --clr-card-product:#1d1d1d;
+    --clr-ellipse: #FFA542;
+    --clr-box-card: #0000001A;
+    --clr-title-card: #1C1C27;
+    --clr-title--scroll: #838383;
+    --clr-old--price: #FFCE7F;
+    --clr-footer-text: #000000;
+    --clr-footer-item: #101010;
+    --clr-i-fa-globe: #838383;
+    --clr-twiter: #0077b5;
+    --clr-instagram: chocolate;
+    --clr-viber: rebeccapurple;
+    --font-montserrat-banner-text:"Montserrat", sans-serif;
+}
+.section-contact-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 45px;
+    margin: 40px auto 10px;
+}
+
+.map__container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-title {
+    font-family: var(--font-montserrat-banner-text);
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+    color: var(--clr-title-card);
+}
+.fa-map {
+    font-size: 2rem;
+    margin-right: 12px;
+}
+.map-address {
+    text-align: left;
+    font-size: 1.55rem;
+    color: var(--clr-title-card);
+    margin-top: 10px;
+}
+
+.media__link__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-media-item-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--clr-white-banner-text);
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    font-size: 3rem;
+    color: var(--clr-title-card);
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-media-item-contact:hover {
+    transform: scale(1.1);
+}
+
+.fa-tw:hover,
+.fa-tm:hover {
+    color: var(--clr-twiter);
+}
+
+.fa-inst:hover {
+    color: var(--clr-instagram);
+}
+
+.fa-vib:hover {
+    color: var(--clr-viber);
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-montserrat-banner-text);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 42px;
+    color: var(--clr-title-card);
+}
+.contact-info i {
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+.contact-info a {
+    margin-left: 10px;
+    text-decoration: none;
+    transition: .5s;
+    color: var(--clr-title-card);
+}
+
+.contact-info a:hover {
+    color: var(--clr-ellipse);
+}

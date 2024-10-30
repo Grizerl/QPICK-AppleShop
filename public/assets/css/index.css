@@ -157,8 +157,9 @@ a
 .scroll--container--desktop
 {
     display: grid;
-    grid-template-columns: repeat(3, 0fr); /* 3 колонки в рядок */
+    grid-template-columns: repeat(3, 0fr);
     padding: 0;
+    margin-bottom: 25px;
 }
 .scroll--item > img,
 .scroll--item > span

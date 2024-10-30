@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../../assets/css/show/products.css" type="text/css">
     <link rel="stylesheet" href="../../../../assets/css/order/order.css" type="text/css">
     <link rel="stylesheet" href="../../../../../../assets/css/order/reserved.css" type="text/css">
+    <link rel="stylesheet" href="../../../../../../assets/css/contact/contact.css" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/basket.css" type="text/css">
     <link rel="icon" type="image/png" href="../../../../assets/images/StoreLogo/AppleLogo.png" title="Apple Logo">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -23,6 +25,9 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!----------->
+    <!---- Services ---->
+    @inject('NumberServices', 'App\Services\AvarageServices')
+    <!------------------>
     <title>@yield('title')</title>
 </head>
 <body>
@@ -47,8 +52,8 @@
                     </a>
                 </div>
                 <div class="right-container">
-                    <a href="#">
-                        <span class="number-save">4</span>
+                    <a href="{{route('basket.order')}}">
+                        <span class="number-save">{{ $NumberServices->number()['avarage'] }}</span>
                         <img src="../../../../../assets/images/navigation/basket.png" alt="Basket of goods">
                     </a>
                 </div>
@@ -72,7 +77,7 @@
                         <a href="#">Кошик</a>
                     </li>
                     <li class="item">
-                        <a href="#">Контакти</a>
+                        <a href="{{route('media.info')}}">Контакти</a>
                     </li>
                 </ul>
             </div>
