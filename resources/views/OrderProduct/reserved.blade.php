@@ -7,7 +7,7 @@
     <div class="external-border">
         <div class="internal-border">
             <div class="media-border-container">
-                <p class="border-text">Номер вашого замовлення №{{$orderNumber}}, з Вами зв'яжеться наш менеджер.</p>
+                <p class="border-text">Номер вашого замовлення №{{$order->order_number}}, з Вами зв'яжеться наш менеджер.</p>
             </div>
         </div>
     </div>

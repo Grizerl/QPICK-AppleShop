@@ -15,7 +15,7 @@
               </div>
               <div style="margin-top: 30px;">
                 <h2  class="title-input">Адреса доставки</h2>
-                <form  id="promoForm" action="{{route('checkout.order')}}" method="post" style="margin-top: 10px;">
+                <form  id="promoForm" action="{{route('checkout.order', $product->id)}}" method="post" style="margin-top: 10px;">
                     @csrf
                     <input type="text" id="street" name="street" class="input-field" placeholder="Вулиця" style="width: 100%; padding: 10px; margin-bottom: 10px;">
                     @if ($errors->has('street'))
@@ -53,9 +53,6 @@
                         @endif
                     </div>
                     <button type="submit" class="btn-input">Закінчити оформлення</button>
-                    <!-- @if (session('success'))
-                        <div class="success">{{ session('success') }}</div>
-                    @endif -->
               </div>
             </div>
             <div style="flex: 1; background-color: #fff; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); padding: 20px;">
@@ -67,7 +64,7 @@
                     </div>
                     <div class="price-order-container">
                         <span>Доставка</span>
-                        <span>{{$randomNumber}} UAH</span>
+                        <span><input type="hidden" name="randomNumber" value="{{ $randomNumber }}">{{$randomNumber}}</span>
                     </div>
                     <div class="price-order-container">
                         <span>До оплати</span>

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
-    <link rel="stylesheet" href="../../../../assets/css/index.css" type="text/css">
+    <link rel="stylesheet" href="../../../../../assets/css/index.css" type="text/css">
     <link rel="stylesheet" href="../../../assets/css/show/products.css" type="text/css">
     <link rel="stylesheet" href="../../../../assets/css/order/order.css" type="text/css">
-    <link rel="stylesheet" href="../../../../../assets/css/order/reserved.css" type="text/css">
+    <link rel="stylesheet" href="../../../../../../assets/css/order/reserved.css" type="text/css">
     <link rel="icon" type="image/png" href="../../../../assets/images/StoreLogo/AppleLogo.png" title="Apple Logo">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -30,11 +30,11 @@
         <div class="container">
             <div class="top-left">
                 <a href="{{route('categories.index')}}">
-                <img src="../../../../assets/images/StoreLogo/QPICK.png" alt="Hardware store logo">
+                <img src="../../../../../assets/images/StoreLogo/QPICK.png" alt="Hardware store logo">
                 </a>
                 <div class="section-phone-select">
                     <div>
-                        <img src="../../../../assets/images/navigation/phone.png" alt="Phone of choice">
+                        <img src="../../../../../assets/images/navigation/phone.png" alt="Phone of choice">
                     </div>
                    @yield('nav')
                 </div>
@@ -43,13 +43,13 @@
                 <div class="right-container">
                     <a href="#">
                         <span class="number-save">2</span>
-                        <img src="../../../../assets/images/navigation/selected.png" alt="Selected product">
+                        <img src="../../../../../assets/images/navigation/selected.png" alt="Selected product">
                     </a>
                 </div>
                 <div class="right-container">
                     <a href="#">
                         <span class="number-save">4</span>
-                        <img src="../../../../assets/images/navigation/basket.png" alt="Basket of goods">
+                        <img src="../../../../../assets/images/navigation/basket.png" alt="Basket of goods">
                     </a>
                 </div>
             </div>
@@ -60,7 +60,7 @@
         <div class="wrap-container">
             <div class="wrap-container-image">
             <a href="{{route('categories.index')}}">
-                <img src="../../../../assets/images/StoreLogo/QPICK.png" alt="Hardware store logo">
+                <img src="../../../../../assets/images/StoreLogo/QPICK.png" alt="Hardware store logo">
             </a>
             </div>
             <div>

@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use App\Models\Category;
+use App\Models\Orders;
 use App\Models\Product;
 use App\Models\PromoCode;
 
@@ -19,7 +20,7 @@ class OrderController extends Controller
         $product = Product::findOrFail($id);
         
         $randomNumber = rand(500, 1500);
-
+        
         return view('OrderProduct.order', compact('product', 'categories', 'randomNumber'));   
     }
 }
