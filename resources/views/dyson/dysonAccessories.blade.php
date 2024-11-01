@@ -4,18 +4,18 @@
 
 @section('mediaContent')
 <aside>
-    <div class="scroll--container">
+    <div class="scroll--container"> <!-- Container for scrollable content -->
         <div class="container--title">
             <h2>{{ $subcategory->name }}</h2>
         </div>
         <div class="scroll--container">
             <ul class="scroll--container--desktop">  
-                @foreach($products as $product)
+                @foreach($products as $product) <!-- Loop through products -->
                     <li class="scroll--list sc-lt-head">
                         <div class="select-container">   
                             <i class="fa-regular fa-heart"></i>
                         </div>
-                        <a class="scroll--item" href="">
+                        <a class="scroll--item" href="#"> <!-- Link to product details (currently empty) -->
                             <img class="scroll--img" src="{{ $product->image ? $product->image : asset('./assets/images/noimage.jpg') }}" alt="{{ $product->name }}" loading="lazy" title="{{$product->name}}">
                             <div class="card--container--item">
                                 <div class="scroll--card--info">
@@ -26,7 +26,7 @@
                                     </div>
                                 </div>
                                 <div class="scroll--card--price">
-                                    @if($product->discount)
+                                    @if($product->discount) <!-- Check if there's a discount -->
                                         <span class="price">{{ $product->price }} UAH</span>
                                         <span class="old--price">{{ $product->discount }} UAH</span>
                                     @else
@@ -44,6 +44,7 @@
 @endsection
 
 @section('nav')
+<!-- Dropdown for selecting product subcategories -->
 <select name="" id="productSelect">
     <option value="" disabled selected hidden>Вибрати модель телефону</option>
     @foreach($categories as $category)

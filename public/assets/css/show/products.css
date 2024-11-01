@@ -716,7 +716,6 @@ input[type=text] {
     color: #ccc;
 }
 
-/* Збільшення розміру стрілок */
 .pagination-container .pagination li a:before,
 .pagination-container .pagination li a:after {
     font-size: 1.5rem; 

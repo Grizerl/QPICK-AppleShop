@@ -3,10 +3,9 @@
 @section('title','Qpick — магазин особливої техніки')
 
 @section('nav')
-
+<!-- Dropdown for selecting product subcategories -->
 <select name="" id="productSelect">
     <option value="" disabled selected hidden>Вибрати модель телефону</option>
-
     @foreach($categories as $category)
         <optgroup label="{{ $category->name }}">
             @foreach($category->subcategories as $subcategory)

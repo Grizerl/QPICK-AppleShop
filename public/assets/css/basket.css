@@ -10,6 +10,8 @@
     --clr-old--price: #FFCE7F;
     --clr-footer-text: #000000;
     --clr-footer-item: #101010;
+    --clr-basket-subtitle: #666;
+    --clr-basket-title: #333;
     --clr-i-fa-globe: #838383;
     --font-montserrat-banner-text:"Montserrat", sans-serif;
 }
@@ -48,14 +50,14 @@
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--clr-basket-title);
 }
 
 .basket-subtitle {
     font-family: var(--font-montserrat-banner-text);
     font-size: 1.75rem;
     font-weight: 400;
-    color: #666;
+    color: var(--clr-basket-subtitle);
     margin-bottom: 20px;
 }
 

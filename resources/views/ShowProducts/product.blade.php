@@ -4,46 +4,47 @@
 
 @section('mediaContent')
     <div class="AppShowProducts">
+           <!-- Header section with navigation links and product article number -->
         <div class="all-container-header">
         <div class="show-container-header">
             <div class="show-content">
                 <ul class="show-nav">
                     <li class="show-list">
-                        <a href="#Product__Characteristics">Характеристики</a>
+                        <a href="#Product__Characteristics">Характеристики</a> <!-- Characteristics link -->
                     </li>
                     <li class="show-list">
-                        <a href="#Product__Description">Опис</a>
+                        <a href="#Product__Description">Опис</a> <!-- Description link -->
                     </li>
                     <li class="show-list">
-                        <a href="#Review">Відгуки</a>
+                        <a href="#Review">Відгуки</a> <!-- Reviews link -->
                     </li>
                 </ul>
             </div>
             <div class="part-number">
                 <span>Артикул: </span>
-                <span>{{ $product->subcategory->article ?? 'MGJ53' }}</span>
+                <span>{{ $product->subcategory->article ?? 'MGJ53' }}</span> <!-- Display product article number -->
             </div>
         </div>
         </div>
-
+            <!-- Main product container with image and details -->
         <div class="product-container">
             <div class="img-container">
-                <img src="{{ $product->image }}" alt="{{$product->name}}" title="{{$product->name}}">
+                <img src="{{ $product->image ?: asset('/assets/images/noimage.jpg') }}" alt="{{ $product->name }}" loading="lazy" title="{{$product->name}}">
             </div>
             <div class="product-details">
                 <div class="product-title">
-                    <h1>{{ $product->name }}</h1>
+                    <h1>{{ $product->name }}</h1> <!-- Product name -->
                 </div>
                 <div class="product-availability {{ $product->availability > 0 ? 'in-stock' : 'out-of-stock' }}">
                     @if($product->availability <= 0 || $product->availability === null)
-                        <p>Товара немає в наявності</p>
+                        <p>Товара немає в наявності</p> <!-- Out of stock message -->
                     @else
-                        <p>Товар в наявності</p>
+                        <p>Товар в наявності</p> <!-- In stock message -->
                     @endif
                 </div>
                 <div class="price-container">
                     @if($product->discount == null)
-                        <span>{{ $product->price }} UAH</span>
+                        <span>{{ $product->price }} UAH</span> <!-- Product price without discount -->
                     @else
                         <span class="new-price">{{ $product->price }} UAH</span>
                         <span class="old-price">{{ $product->discount }} UAH</span>
@@ -52,23 +53,23 @@
                 <div class="actions">
                     @if($product->availability <= 0 || $product->availability === null)
                         <button class="outStock" href="#">Немає в наявності</button>
-                    @else
-                        <a id="buyBtn" class="btn-animation" href="#">Купити</a>
-                        <a id="not-working-service" href="#">Оплата частинами</a>
+                    @else 
+                        <a id="buyBtn" class="btn-animation" href="#">Купити</a> <!-- Buy button -->
+                        <a id="not-working-service" href="#">Оплата частинами</a> <!-- Payment in installments link -->
                     
                     @endif
                 </div>
                 <div id="buyModal" class="mfp-content modal">
                     <div class="cart--content modal-content">
-                        <span class="close">&times;</span>
-                        <h2>Оформлення покупки</h2>
+                        <span class="close">&times;</span> <!-- Close modal button -->
+                        <h2>Оформлення покупки</h2> <!-- Purchase processing title -->
                         <form>
                         <div class="modal-form">
-                            <img class="modal-img" src="{{ $product->image }}" alt="Product Image">
+                            <img class="modal-img" src="{{ $product->image }}" alt="Product Image"> <!-- Modal product image -->
                             <div style=" display: flex; align-items: center; justify-content: space-between; width: 100%;">
                             <div>
                                 <h1 class="modal-name">{{ $product->name }}</h1>
-                                <span class="modal-price">{{ $product->price }} UAH</span>
+                                <span class="modal-price">{{ $product->price }} UAH</span> <!-- Modal product price -->
                             </div>
                             <div class="modal-section-price">
                                 <span class="modal-title-price">Сума</span>
@@ -78,13 +79,13 @@
                         </div>
                         </form>
                         <div class="section-modal-btn">
-                            <a href="#"  class="default-btn">Продовжити покупки</a>
+                            <a href="#"  class="default-btn">Продовжити покупки</a> <!-- Continue shopping button -->
                             <a href="{{route('subcategories.order',$product['id'])}}" class="main-but red">Оформити замовлення</a>
                         </div>
                     </div>
                 </div>
                     <div class="color-options">
-                    <h1>Колір</h1>
+                    <h1>Колір</h1> <!-- Color options title -->
                     @if($product->subcategory->category->name === 'Apple iPhone')
                     <div class="colors">
                         <span class="color" style="background-color: #000000;"></span>
@@ -141,6 +142,7 @@
                     </div>
                     @endif
                 </div>
+                <!-- Check if the product belongs to Apple iPhone or Apple Mac  -->
                 @if($product->subcategory->category->name === 'Apple iPhone' || $product->subcategory->category->name === 'Apple Mac')
                     <div class="storage-options">
                     <h1>Ємність</h1>
@@ -206,9 +208,10 @@
                             <img src="{{$product->image}}" alt="{{$product->name}}" title="{{$product->name}}">
                         </figure>
                     </div>
+                    <!--  Check if the product is for consoles and display specific characteristics  -->
                     @if($product->subcategory->name === 'For Consoles')
                     <div class="product-specs-title">
-                        <h2>Технические характеристики {{$product->name}}</h2>
+                        <h2>Технічні характеристики {{$product->name}}</h2>
                         <ul class="product-specs-list">
                             <li>Мінімалістичний дизайн корпуса.</li>
                             <li>Стиль та зручність для геймерів.</li>
@@ -219,7 +222,7 @@
                     </div>
                     @elseif($product->subcategory->name === 'Сonsole Games')
                     <div class="product-specs-title">
-                        <h2>Технические характеристики {{$product->name}}</h2>
+                        <h2>Технічні характеристики {{$product->name}}</h2>
                         <ul class="product-specs-list">
                             <li>Змінюйте свого персонажа.</li>
                             <li>Вирушайте в подорож, знаходите фантастичних тварин.</li>
@@ -230,7 +233,7 @@
                     </div>
                     @elseif($product->subcategory->name === 'Dyson Straightener' || $product->subcategory->name === 'Dyson HairDryers' || $product->subcategory->name === 'Dyson Rectifiers')
                     <div class="product-specs-title">
-                        <h2>Технические характеристики {{$product->name}}</h2>
+                        <h2>Технічні характеристики {{$product->name}}</h2>
                         <ul class="product-specs-list">
                             <li>Кращий вибір для вашого дому.</li>
                             <li>Революційні технології для ідеальної чистоти.</li>
@@ -241,7 +244,7 @@
                     </div>
                     @elseif($product->subcategory->category->name === 'Apple AirPods')
                     <div class="product-specs-title">
-                        <h2>Технические характеристики {{$product->name}}</h2>
+                        <h2>Технічні характеристики {{$product->name}}</h2>
                         <ul class="product-specs-list">
                             <li>Залишайся з музикою.</li>
                             <li>Заряду на цілий день.</li>
@@ -252,7 +255,7 @@
                     </div>
                     @else
                     <div class="product-specs-title">
-                        <h2>Технические характеристики {{$product->name}}</h2>
+                        <h2>Технічні характеристики {{$product->name}}</h2>
                         <ul class="product-specs-list">
                             <li>{{$product->name}} получил дисплей ProMotion с частотой обновления 120 Гц.</li>
                             <li>Насыщенный контраст, яркость и диагональ остаются без изменений.</li>
@@ -266,6 +269,7 @@
             </div>
             <div id="Product__Characteristics" class="product-main-characteristics">
                 <h2>Основні характеристики:</h2>
+                   <!-- Display product characteristics -->
                 <div class="product-info-line">
                     <div>Бренд:</div>
                     <div>{{$product->brand}}</div>
@@ -276,7 +280,7 @@
                 </div>
                 <div class="product-info-line">
                     <div>Гарантія:</div>
-                    <div>Гарантія від виробника на 12 місяців. Гарантія 31 день від Ябко з можливістю продовження.</div>
+                    <div>Гарантія від виробника на 12 місяців. Гарантія 31 день від Qpick з можливістю продовження.</div>
                 </div>
                 <div class="bottom-line"></div>
                 <h2>Корпус та габарити</h2>
@@ -300,8 +304,10 @@
     <div style="width:100%; display: flex; justify-content: center; align-items: center;">
         <div class="wrapp-product__rewievs">
             <div class="top-block-review">
+                <!--  Title displaying the product name and review section  -->
                 <h1 class="wrapp-product__rewievs-title">Відгуки клієнтів про {{$product->name}}</h1>
                 <div>
+                    <!-- Subtitle showing the overall product rating with stars -->
                     <h2 class="wrapp-product__rewievs-subtitle">
                         Загальний рейтинг товару:
                         <i class="fa-solid fa-star"></i>
@@ -313,6 +319,7 @@
                 </div>
             </div>
             <div style="width: 55%;">
+                <!-- Review submission form -->
                 <form class="form--review" action="{{route('reviews.manage')}}" method="post">
                     @csrf
                     <input type="text" name="name" placeholder="Ваше ім'я" id="review-name" class="review-name">
@@ -330,6 +337,7 @@
     </div>
 </aside>
 <section id="Review" class="review-section">
+    <!-- Loop through each review and display its details -->
 @foreach ($reviews as $feedback)
     <div class="review-container">
         <div class="review">
@@ -350,6 +358,7 @@
         </div>
     </div>
 @endforeach
+<!-- Pagination for navigating through reviews -->
     <div class="pagination-container">
         {{ $reviews->links() }}
     </div>
@@ -373,8 +382,8 @@
 @section('nav')
 
 <select name="" id="productSelect">
+<!-- Dropdown for selecting product subcategories -->
     <option value="" disabled selected hidden>Вибрати модель телефону</option>
-
     @foreach($categories as $category)
         <optgroup label="{{ $category->name }}">
             @foreach($category->subcategories as $subcategory)

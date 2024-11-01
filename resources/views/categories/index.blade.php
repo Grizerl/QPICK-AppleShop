@@ -3,10 +3,9 @@
 @section('title','Qpick — магазин особливої техніки')
 
 @section('nav')
-
+ <!-- Dropdown menu for selecting phone models -->
 <select name="" id="productSelect">
     <option value="" disabled selected hidden>Вибрати модель телефону</option>
-
     @foreach($categories as $category)
         <optgroup label="{{ $category->name }}">
             @foreach($category->subcategories as $subcategory)
@@ -22,7 +21,7 @@
         <div class="advertising-line">
             <div class="advertising-container">
                 <div>
-                    <img src="./assets/images/AdvertisingBanner/iPhone-13-Pro-Max.png" alt="Banner on the main part" title="Banner on the main part">
+                    <img style="user-select: none;" src="./assets/images/AdvertisingBanner/iPhone-13-Pro-Max.png" alt="Banner on the main part" title="Banner on the main part">
                 </div>
             </div>
             <div>

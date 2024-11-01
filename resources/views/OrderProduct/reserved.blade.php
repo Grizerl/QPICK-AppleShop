@@ -4,17 +4,18 @@
 
 @section('mediaContent')
 <div style="height: 64.5vh; margin:5vh;">
-    <div class="external-border">
-        <div class="internal-border">
+    <div class="external-border"> <!-- Outer border for styling -->
+        <div class="internal-border"> <!-- Inner border for additional styling -->
             <div class="media-border-container">
-                <p class="border-text">Номер вашого замовлення №{{$order->order_number}}, з Вами зв'яжеться наш менеджер.</p>
-            </div>
+                <p class="border-text">Номер вашого замовлення №{{$order->order_number}}, з Вами зв'яжеться наш менеджер.</p> <!-- Display the order number and message to the user -->
+            </div> 
         </div>
     </div>
 </div>
 @endsection
 
 @section('nav')
+<!-- Dropdown for selecting product subcategories -->
 <select name="" id="productSelect">
     <option value="" disabled selected hidden>Вибрати модель телефону</option>
     @foreach($categories as $category)

@@ -5,16 +5,17 @@
 @section('mediaContent')
   <div style="padding: 20px;">
     <div style="max-width: 1200px; margin: 0 auto; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 30px;">
-       <h1 class="header-title">Оформлення замовлення</h1>
+       <h1 class="header-title">Оформлення замовлення</h1> <!-- Order processing title -->
         <div style="display: flex; justify-content: space-between; gap: 20px;">
             <div style="flex: 2;">
               <div>
+                <!-- Google Maps embed for delivery address -->
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325516.3770455823!2d30.532690549999998!3d50.402035500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x5f251d1397901804!2z0LzRltGB0YLQviDQmtC40ZfQsiwg0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1suk!2sua!4v1729072902647!5m2!1suk!2sua" 
                 width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
               </iframe>
               </div>
               <div style="margin-top: 30px;">
-                <h2  class="title-input">Адреса доставки</h2>
+                <h2  class="title-input">Адреса доставки</h2> <!-- Delivery address title -->
                 <form  id="promoForm" action="{{route('checkout.order', $product->id)}}" method="post" style="margin-top: 10px;">
                     @csrf
                     <input type="text" id="street" name="street" class="input-field" placeholder="Вулиця" style="width: 100%; padding: 10px; margin-bottom: 10px;">
@@ -116,6 +117,7 @@
 @endsection
 
 @section('nav')
+<!-- Dropdown for selecting product subcategories -->
 <select name="" id="productSelect">
     <option value="" disabled selected hidden>Вибрати модель телефону</option>
     @foreach($categories as $category)
