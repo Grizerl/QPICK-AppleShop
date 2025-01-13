@@ -32,57 +32,60 @@
 <body>
     <div class="App">
         <div class="container">
-            <div class="top-left">
-                <a href="{{route('categories.index')}}">
-                    <img src="../../../../../assets/images/StoreLogo/QPICK.png" alt="Hardware store logo"> <!-- Store logo -->
-                </a>
-                <div class="section-phone-select">
-                    <div>
-                        <img src="../../../../../assets/images/navigation/phone.png" alt="Phone of choice"> <!-- Phone icon -->
+            <div class="navbar-container">
+                <div class="top-left">
+                    <a href="{{route('categories.index')}}">
+                        <img src="../../../../../assets/images/StoreLogo/QPICK.png" alt="Hardware store logo"> <!-- Store logo -->
+                    </a>
+                    <div class="section-phone-select">
+                        <div>
+                            <img src="../../../../../assets/images/navigation/phone.png" alt="Phone of choice"> <!-- Phone icon -->
+                        </div>
+                        @yield('nav') <!-- Placeholder for navigation content -->
                     </div>
-                   @yield('nav') <!-- Placeholder for navigation content -->
                 </div>
-            </div>
-            <div class="top-right">
-                <div class="right-container">
-                    <a href="#">
-                        <span class="number-save">2</span> <!-- Number of selected products -->
-                        <img src="../../../../../assets/images/navigation/selected.png" alt="Selected product"> <!-- Selected product icon -->
-                    </a>
-                </div>
-                <div class="right-container">
-                    <a href="{{route('basket.order')}}">
-                        <span class="number-save">{{ $NumberServices->number()['avarage'] }}</span> <!-- Average number of items in the basket -->
-                        <img src="../../../../../assets/images/navigation/basket.png" alt="Basket of goods"> <!-- Basket icon -->
-                    </a>
+                <div class="top-right">
+                    <div class="right-container">
+                        <a href="#">
+                            <span class="orders">2</span> <!-- Number of selected products -->
+                            <img src="../../../../../assets/images/navigation/selected.png" alt="Selected product"> <!-- Selected product icon -->
+                        </a>
+                    </div>
+                    <div class="right-container">
+                        <a href="{{route('basket.order')}}">
+                            <span class="orders">{{ $NumberServices->number()['avarage'] }}</span> <!-- Average number of items in the basket -->
+                            <img src="../../../../../assets/images/navigation/basket.png" alt="Basket of goods"> <!-- Basket icon -->
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     @yield('mediaContent') <!-- Placeholder for media content -->
-    
-    <footer class="site-footer">
-        <div class="footer-top-product">
-            <div class="wrap-container">
-                <div class="wrap-container-image">
-                    <a href="{{route('categories.index')}}">
-                        <img src="../../../../../assets/images/StoreLogo/QPICK.png" alt="Hardware store logo"> <!-- Store logo in footer -->
-                    </a>
-                </div>
-                <div>
-                    <ul class="second-nav">
-                        <li class="item">
-                            <a href="#">Вибране</a> <!-- Favorite items link -->
-                        </li>
-                        <li class="item">
-                            <a href="{{route('basket.order')}}">Кошик</a> <!-- Basket link -->
-                        </li>
-                        <li class="item">
-                            <a href="{{route('media.info')}}">Контакти</a> <!-- Contact link -->
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="mspoiler">Умови сервісу</h3> <!-- Service terms title -->
+<footer class="site-footer">
+    <div>
+        <div class="container">
+            <div class="footer-top-product">
+                <div class="wrap-container">
+                    <div class="wrap-container-image">
+                        <a href="{{route('categories.index')}}">
+                            <img src="../../../../../assets/images/StoreLogo/QPICK.png" alt="Hardware store logo"> <!-- Store logo in footer -->
+                        </a>
+                    </div>
+                    <div>
+                        <ul class="second-nav">
+                            <li class="item">
+                                <a href="#">Вибране</a> <!-- Favorite items link -->
+                            </li>
+                            <li class="item">
+                                <a href="{{route('basket.order')}}">Кошик</a> <!-- Basket link -->
+                            </li>
+                            <li class="item">
+                                <a href="{{route('media.info')}}">Контакти</a> <!-- Contact link -->
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="mspoiler">Умови сервісу</h3> <!-- Service terms title -->
                     <div>
                         <ul class="second-nav sc-nv">
                             <li class="item">
@@ -99,27 +102,28 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="social-media">
-                    <ul class="social-media-container">
-                        <li>
-                            <a class="social-media-item" href="#"><i class="fa-brands fa-twitter"></i></a> <!-- Twitter icon -->
-                        </li>
-                        <li>
-                            <a class="social-media-item" href="#"><i class="fa-brands fa-instagram"></i></a> <!-- Instagram icon -->
-                        </li>
-                        <li>
-                            <a class="social-media-item" href="#"><i class="fa-brands fa-telegram"></i></a> <!-- Telegram icon -->
-                        </li>
-                        <li>
-                            <a class="social-media-item" href="#"><i class="fa-brands fa-viber"></i></a> <!-- Viber icon -->
-                        </li>
-                    </ul>
+                    </div>
+                    <div class="social-media">
+                        <ul class="social-media-container">
+                            <li>
+                                <a class="social-media-item" href="#"><i class="fa-brands fa-twitter"></i></a> <!-- Twitter icon -->
+                            </li>
+                            <li>
+                                <a class="social-media-item" href="#"><i class="fa-brands fa-instagram"></i></a> <!-- Instagram icon -->
+                            </li>
+                            <li>
+                                <a class="social-media-item" href="#"><i class="fa-brands fa-telegram"></i></a> <!-- Telegram icon -->
+                            </li>
+                            <li>
+                                <a class="social-media-item" href="#"><i class="fa-brands fa-viber"></i></a> <!-- Viber icon -->
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-
+    </div>
+</footer>
     <!-- JavaScript Files -->
     <script src="/assets/js/productSelect.js"></script> <!-- Product selection script -->
     <script src="/assets/js/swiper.js"></script> <!-- Swiper initialization script -->

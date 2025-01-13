@@ -4,7 +4,9 @@
 
 @section('mediaContent')
 <aside>
-    <div class="scroll--container">
+    <div>
+        <div class="container">
+            <div class="scroll--container">
         <div class="container--title">
             <!-- Title of the subcategory of products -->
             <h2>{{ $subcategory->name }}</h2>
@@ -42,6 +44,8 @@
                     </li>
                 @endforeach
             </ul>
+        </div>
+            </div>
         </div>
     </div>
 </aside>

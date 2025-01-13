@@ -3,7 +3,6 @@
 @section('title','Qpick — магазин особливої техніки')
 
 @section('nav')
- <!-- Dropdown menu for selecting phone models -->
 <select name="" id="productSelect">
     <option value="" disabled selected hidden>Вибрати модель телефону</option>
     @foreach($categories as $category)
@@ -14,52 +13,50 @@
         </optgroup>
     @endforeach
 </select>
-
 @endsection
 
 @section('mediaContent')
-        <div class="advertising-line">
+    <div class="advertising-line">
+        <div class="container">
             <div class="advertising-container">
                 <div>
-                    <img style="user-select: none;" src="./assets/images/AdvertisingBanner/iPhone-13-Pro-Max.png" alt="Banner on the main part" title="Banner on the main part">
+                    <h1 class="banner-text">Аксесуари для<br>Iphone 13 Pro Max</h1>
                 </div>
-            </div>
-            <div>
-                <h1 class="advertising-banner-main-text">Аксесуари для<br>
-                Iphone 13 Pro Max</h1>
+                <img class="banner-img" src="./assets/images/AdvertisingBanner/iPhone-13-Pro-Max.png" alt="Banner on the main part" title="Banner on the main part">
             </div>
         </div>
     </div>
 <section>
     <div>
-        <div class="scroll--container">
-            <div class="container--title">
-                <h2>Dyson</h2>
-            </div>
+        <div class="container">
             <div class="scroll--container">
-               <ul class="scroll--container--desktop">
-                    <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('subcategories.show',28)}}">
-                            <img src="/assets/images/Dyson/stylers/stailerdysonbg11.webp" alt="Dyson stylers" loading="lazy" title="Dyson stylers">
-                            <span class="scroll--type--cover">Стайлери</span>
-                        </a>
-                    </li>
-                    <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('subcategories.show',29)}}">
-                            <img src="/assets/images/Dyson/hairDryers/hairDryers10.webp" alt="Dyson hair dryer" loading="lazy" title="Dyson hair dryer">
-                            <span class="scroll--type--cover">Фени</span>
-                        </a>
-                    </li>
-                    <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('subcategories.show',30)}}">
-                            <img src="/assets/images/Dyson/rectifiers/rectifiers5.webp" alt="Dyson rectifiers" loading="lazy" title="Dyson rectifiers">
-                            <span class="scroll--type--cover">Випрямлячі</span>
-                        </a>
-                    </li>
-               </ul>
+                <div class="container--title">
+                    <h2>Dyson</h2>
+                </div>
+                <div class="scroll--container">
+                    <ul class="scroll--container--desktop">
+                        <li class="scroll--list">
+                            <a class="scroll--item" href="{{route('subcategories.show',28)}}">
+                                <img src="/assets/images/Dyson/stylers/stailerdysonbg11.webp" alt="Dyson stylers" loading="lazy" title="Dyson stylers">
+                                <span class="scroll--type--cover">Стайлери</span>
+                            </a>
+                        </li>
+                        <li class="scroll--list">
+                            <a class="scroll--item" href="{{route('subcategories.show',29)}}">
+                                <img src="/assets/images/Dyson/hairDryers/hairDryers10.webp" alt="Dyson hair dryer" loading="lazy" title="Dyson hair dryer">
+                                <span class="scroll--type--cover">Фени</span>
+                            </a>
+                        </li>
+                        <li class="scroll--list">
+                            <a class="scroll--item" href="{{route('subcategories.show',30)}}">
+                                <img src="/assets/images/Dyson/rectifiers/rectifiers5.webp" alt="Dyson rectifiers" loading="lazy" title="Dyson rectifiers">
+                                <span class="scroll--type--cover">Випрямлячі</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    <aside>
+            <aside>
     <div class="scroll--container">
             <div class="container--title">
                 <h2>Apple AirPods</h2>
@@ -342,36 +339,37 @@
                 </div>
             </div>
         </div>
-    </aside>
-    <aside>
-    <div class="scroll--container">
-            <div class="container--title">
-                <h2>Консолі та геймінг</h2>
-            </div>
-            <div class="scroll--container">
-               <ul class="scroll--container--desktop">
-                    <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('subcategories.show',34)}}">
-                            <img src="/assets/images/Console/consoleGaming/console.webp" alt="Console for gaming" loading="lazy" title="Console for gaming">
-                            <span class="scroll--type--cover">Ігрові консолі</span>
-                        </a>
-                    </li>
-                    <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('subcategories.show',35)}}">
-                            <img src="/assets/images/Console/accessories/accessories.webp" alt="Accessories for console" loading="lazy" title=""Accessories for console">
-                            <span class="scroll--type--cover">Для консолей</span>
-                        </a>
-                    </li>
-                    <li class="scroll--list">
-                        <a class="scroll--item" href="{{route('subcategories.show',36)}}">
-                            <img src="/assets/images/Console/games/games5.webp" alt="Games gta 5" loading="lazy" title="Games gta 5">
-                            <span class="scroll--type--cover">Ігри</span>
-                        </a>
-                    </li>
-               </ul>
-            </div>
+            </aside>
+            <aside>
+                <div class="scroll--container">
+                    <div class="container--title">
+                        <h2>Консолі та геймінг</h2>
+                    </div>
+                    <div class="scroll--container">
+                        <ul class="scroll--container--desktop">
+                            <li class="scroll--list">
+                                <a class="scroll--item" href="{{route('subcategories.show',34)}}">
+                                    <img src="/assets/images/Console/consoleGaming/console.webp" alt="Console for gaming" loading="lazy" title="Console for gaming">
+                                    <span class="scroll--type--cover">Ігрові консолі</span>
+                                </a>
+                            </li>
+                            <li class="scroll--list">
+                                <a class="scroll--item" href="{{route('subcategories.show',35)}}">
+                                    <img src="/assets/images/Console/accessories/accessories.webp" alt="Accessories for console" loading="lazy" title=""Accessories for console">
+                                    <span class="scroll--type--cover">Для консолей</span>
+                                </a>
+                            </li>
+                            <li class="scroll--list">
+                                <a class="scroll--item" href="{{route('subcategories.show',36)}}">
+                                    <img src="/assets/images/Console/games/games5.webp" alt="Games gta 5" loading="lazy" title="Games gta 5">
+                                    <span class="scroll--type--cover">Ігри</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
         </div>
-    </aside>
     </div>
 </section>
 @endsection
