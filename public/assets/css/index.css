@@ -14,32 +14,27 @@
     --font-montserrat-banner-text:"Montserrat", sans-serif;
 }
 
-html
-{
+html {
     font-size: 10px;
 }
 
-body
-{
+body {
     margin: 0px;
     background: var(--clr-body);
 }
 
-*,*:after,*:before
-{
+*,*:after,*:before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth
 }
 
-ul
-{
+ul {
     list-style-type: none
 }
 
-a
-{
+a {
     text-decoration: none;
 }
 
@@ -158,7 +153,9 @@ a
 .scroll--item > img,
 .scroll--item > span {
     width: 75%;
-    margin-top: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 7vh;
+  
 }
 
 .scroll--item {
@@ -166,8 +163,6 @@ a
 }
 
 .scroll--list {   
-    width: 350px;
-    height: 408px;
     background: var(--clr-card-product);
     border-radius: 30px;
     box-sizing: border-box;
@@ -203,6 +198,7 @@ a
 .scroll--card--price {
     width: 100%;
     margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -275,20 +271,20 @@ a
 }
 
 .wrap-container {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-around;
-    height: 149px;
-    width: 100%;
-    box-sizing: border-box;
+    grid-template-columns: repeat(4,1fr);
     border-radius: 30px 30px 0px 0px;
     background-color: var(--clr-white-banner-text);
+}
+
+.wrap-container-image {
+    text-align: center;
 }
 
 .sc-nv,.social-media-container {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .mspoiler,.item > a {
@@ -308,6 +304,10 @@ a
     color: var(--clr-i-fa-globe);    
 }
 
+.second-nav {
+    margin: 15px 0px;
+}
+
 .item-nv > a { 
     padding: 0px 12px;
     color: var(--clr-footer-item);
@@ -318,4 +318,231 @@ a
     padding: 0px 12px;
     background-color: transparent;
     color: var(--clr-footer-item);
+}
+
+.adaptive-menu {
+    display: none;
+}
+
+/* Adaptive menu */
+@media (max-width:1100px) {
+
+    .scroll--item > img {
+        width: 90%;
+    }
+
+    .scroll--container--desktop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .scroll--list {
+        margin: 0vh;
+    }
+}
+
+@media (max-width:850px) {
+    .scroll--item > img {
+        width: 90%;
+        object-fit: contain;
+    }
+
+    .scroll--card--info h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:700px) {
+    .navbar-container {
+        margin: 0px 25px;
+    }
+    .section-phone-select,.top-right {
+        display: none;
+    }
+
+    .adaptive-menu {
+        display: block !important;
+    }
+
+    .burger-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.4s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        z-index: 9999 !important;
+    }
+    
+    /* Відкриваємо меню */
+    .burger-container.active {
+        right: 0;
+    }
+    
+    /* Кнопка закриття */
+    .close-btn-burger {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        background: #f5f5f5;
+        padding: 5px;
+        border-radius: 50%;
+        transition: background 0.3s;
+    }
+    
+    .close-btn-burger:hover {
+        background: #ddd;
+    }
+    
+    /* Контейнер навігації */
+    .technique {
+        margin-top: 80px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .technique > select {
+        outline: none;
+        background: transparent;
+        font-family: var(--font-montserrat-banner-text);
+        font-size: 15px;
+        font-weight: 500;
+        padding: 0vh 0.3vh 0vh 1vh;
+        cursor: pointer;
+    }
+    
+    .technique img {
+        height: auto;
+        margin: 0px 8px;
+    }
+    
+    /* Контейнер іконок */
+    .aside-media-content {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    /* Іконки з замовленнями */
+    .aside-media-content a {
+        display: flex;
+        align-items: center;
+        position: relative;
+        text-decoration: none;
+        margin: 0px 15px;
+    }
+    
+    /* Pначки кількості товарів */
+    .orders {
+        position: absolute;
+        top: -11px;
+        right: -11px;
+        color: white;
+        font-size: 9px;
+        font-weight: bold;
+        padding: 3px 7px;
+        border-radius: 50%;
+    }
+    
+    /* Стилізація іконок */
+    .aside-media-content img {
+        width: 25px;
+        height: 23px;
+        transition: transform 0.3s;
+    }
+    
+    .aside-media-content a:hover img {
+        transform: scale(1.1);
+    }
+
+    .sc-bur {
+        width: 100%;
+        border-top: 1px solid var(--clr-ellipse);;
+        margin-top: 25px;
+        padding-top: 25px;
+    }
+
+    .scroll--container--desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .wrap-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    .sc-nv,.social-media-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-text {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .scroll--item > img {
+        width: 60%;
+        object-fit: contain;
+    }
+    
+    .container--title {
+        display: block;
+        margin: 2.5vh 0vh 2vh;
+    }
+
+    .container--title h2 {
+        text-align: center;
+    }
+
+    .banner-text {
+        text-align: center;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .container {
+        padding: 0rem 2.5rem;
+    }
+
+    .scroll--container--desktop,.wrap-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .wrap-container-image {
+        margin-top: 20px; 
+    }
+
+    .advertising-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column; 
+    }
+
+    .banner-img {
+        padding: 20px 0px 0px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .scroll--item > img {
+        width: 70%;
+    }
 }

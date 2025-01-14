@@ -41,7 +41,7 @@
                         <div>
                             <img src="../../../../../assets/images/navigation/phone.png" alt="Phone of choice"> <!-- Phone icon -->
                         </div>
-                        @yield('nav') <!-- Placeholder for navigation content -->
+                        @yield('nav')  <!-- Placeholder for navigation content -->
                     </div>
                 </div>
                 <div class="top-right">
@@ -56,6 +56,46 @@
                             <span class="orders">{{ $NumberServices->number()['avarage'] }}</span> <!-- Average number of items in the basket -->
                             <img src="../../../../../assets/images/navigation/basket.png" alt="Basket of goods"> <!-- Basket icon -->
                         </a>
+                    </div>
+                </div>
+                <div class="adaptive-menu">
+                    <div class="burger-menu">
+                            <svg class="menu-btn"  stroke="currentColor" fill="currentColor" stroke-width="0" data-name="Layer 1" id="Layer_1" height="25" width="25" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#ba63c6;}</style></defs><title/><path class="cls-1" d="M3,9H29a2,2,0,0,0,0-4H3A2,2,0,0,0,3,9Z"/><path class="cls-1" d="M29,14H3a2,2,0,0,0,0,4H29a2,2,0,0,0,0-4Z"/><path class="cls-1" d="M29,23H3a2,2,0,0,0,0,4H29a2,2,0,0,0,0-4Z"/></svg>
+                        <div class="burger-container">
+                            <div class="close-btn-burger">
+                                <svg height="25" width="25" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+                            </div>    
+                            <div class="technique">
+                                <img src="../../../../../assets/images/navigation/phone.png" alt="Phone of choice"> <!-- Phone icon -->
+                                @yield('nav')
+                            </div>
+                            <div class="aside-media-content">
+                                <a href="#">
+                                    <span class="orders">2</span> <!-- Number of selected products -->
+                                    <img src="../../../../../assets/images/navigation/selected.png" alt="Selected product"> <!-- Selected product icon -->
+                                </a>
+                                <a href="{{route('basket.order')}}">
+                                    <span class="orders">{{ $NumberServices->number()['avarage'] }}</span> <!-- Average number of items in the basket -->
+                                    <img src="../../../../../assets/images/navigation/basket.png" alt="Basket of goods"> <!-- Basket icon -->
+                                </a>
+                            </div>
+                            <div class="social-media sc-bur">
+                                <ul class="social-media-container">
+                                    <li>
+                                        <a class="social-media-item" href="#"><i class="fa-brands fa-twitter"></i></a> <!-- Twitter icon -->
+                                    </li>
+                                    <li>
+                                        <a class="social-media-item" href="#"><i class="fa-brands fa-instagram"></i></a> <!-- Instagram icon -->
+                                    </li>
+                                    <li>
+                                        <a class="social-media-item" href="#"><i class="fa-brands fa-telegram"></i></a> <!-- Telegram icon -->
+                                    </li>
+                                    <li>
+                                        <a class="social-media-item" href="#"><i class="fa-brands fa-viber"></i></a> <!-- Viber icon -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -337,7 +337,6 @@
     </div>
 </aside>
 <section id="Review" class="review-section">
-    <!-- Loop through each review and display its details -->
 @foreach ($reviews as $feedback)
     <div class="review-container">
         <div class="review">
@@ -380,17 +379,15 @@
 @endsection
 
 @section('nav')
-
-<select name="" id="productSelect">
-<!-- Dropdown for selecting product subcategories -->
-    <option value="" disabled selected hidden>Вибрати модель телефону</option>
-    @foreach($categories as $category)
-        <optgroup label="{{ $category->name }}">
-            @foreach($category->subcategories as $subcategory)
-                <option value="{{ route('subcategories.show', $subcategory) }}">{{ $subcategory->name }}</option>
+    <select name="" id="productSelect">
+        <!-- Dropdown for selecting product subcategories -->
+        <option value="" disabled selected hidden>Вибрати модель телефону</option>
+            @foreach($categories as $category)
+                <optgroup label="{{ $category->name }}">
+                    @foreach($category->subcategories as $subcategory)
+                        <option value="{{ route('subcategories.show', $subcategory) }}">{{ $subcategory->name }}</option>
+                    @endforeach
+                </optgroup>
             @endforeach
-        </optgroup>
-    @endforeach
-</select>
-
+    </select>
 @endsection
