@@ -20,6 +20,10 @@
     --font-montserrat-banner-text:"Montserrat", sans-serif;
 }
 
+.AppShowProducts {
+    padding: 20px;
+}
+
 .show-container-header,.show-nav
 {
     display: flex;
@@ -288,7 +292,7 @@ form
     font-size: 20px;
     padding: 10px 0px 20px 0px;
 }
-.modal-form
+.modal-form,.buy-product-form
 {
     display: flex;
     align-items: center;
@@ -296,8 +300,8 @@ form
 }
 .modal-img
 {
-    width: 26%;
-    padding: 15px 0px 15px 15px;
+    max-width: 170px;
+    padding-left: 5px;
 }
 .modal-name
 {
@@ -313,27 +317,19 @@ form
 .modal-price
 {
     font-weight: 600;
-    font-size: 19px;
+    font-size: 20px;
     margin-left: 2vh;
     color: #121212;
 }
-.modal-section-price
-{
-    text-align: right;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-right: 20px;
-}
+
 .modal-title-price
 {
-    text-align: right;
     font-family: var(--font-montserrat-banner-text);
     font-size: 16px;
     font-weight: 500;
     color: #808080;
-    margin-bottom: 4vh
+    margin-bottom: 1vh;
+    margin-left: 2vh;
 }
 .section-modal-btn
 {
@@ -351,7 +347,7 @@ form
     font-weight: 700;
     font-size: 17px;
     color: #999;
-    margin-right: 15px;
+    margin: 15px 0px;
 }
 .main-but
 {
@@ -400,7 +396,7 @@ form
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 64%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .product-title-section
@@ -511,10 +507,11 @@ form
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex: 2;
     border-radius: 10px;
     background-color: var(--clr-white-banner-text);
-    padding: 4vh 0vh;
-    width: 62.5%;
+    padding: 4vh 5vh;
+    max-width: 1200px;
 }
 .top-block-review
 {
@@ -542,6 +539,10 @@ form
     margin: 0;
     color: var(--clr-ellipse);
 }
+.sc-ForRe {
+    width: 60%;
+}
+
 .form--review
 {
     width: 100%;
@@ -617,7 +618,7 @@ input[type=text] {
 }
 
 .review-container {
-    width: 64%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #e0e0e0;
@@ -654,6 +655,7 @@ input[type=text] {
 }
 
 .review-helpful {
+    display: inline-block;
     font-size: 1.3rem;
     font-family: var(--font-montserrat-banner-text);
     font-weight: 600;
@@ -719,4 +721,155 @@ input[type=text] {
 .pagination-container .pagination li a:before,
 .pagination-container .pagination li a:after {
     font-size: 1.5rem; 
+}
+/* Adaptive menu */
+@media (max-width:1500px) {
+    .section-modal-btn {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:1100px) {
+    .benefit-list {
+        flex-wrap: wrap;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    .img-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .img-container {
+        flex: 1.5;
+        padding: 0;
+    }
+
+    .img-container img {
+        height: 75%;
+        width: 100%;
+    }
+
+    .product-container {
+        padding: 20px 10px;
+    }
+
+    .product-info-line div {
+        text-align: right;
+    }
+}
+
+@media (max-width:800px) {
+    .sc-ForRe {
+        width: 80%;
+    }
+
+    .product-container,.product-details {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .product-details {
+        padding: 20px 0px;
+    }
+
+    .color-options h1,.benefits h1 {
+        text-align: center;
+    }
+
+    .benefit-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .storage-options {
+        text-align: center;
+    }
+}
+
+@media (max-width:600px) {
+    .show-container-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .show-content {
+        margin: 8px 0px;
+    }
+
+    .product-title {
+        text-align: center;
+    }
+
+    .color-options span {
+        margin-right: 3px;
+    }
+}
+
+@media (max-width:450px) {
+    .sc-ForRe {
+        width: 100%;
+    }
+
+    .wrapp-product__rewievs-subtitle {
+        font-size: 19px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .modal-name {
+        margin-left: 1vh;
+        margin-bottom: 1vh;
+        font-size: 14px;
+    }
+
+    .modal-price {
+        font-size: 17px;
+    }
+
+    .modal-img {
+        max-width: 150px;
+        padding: 5px;
+    }
+
+    .wrapp-product__rewievs-title {
+        font-size: 25px;
+    }
+
+    .actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .color-options span {
+        margin-right: 1px;
+    }
+
+    .AppShowProducts,.product-landing {
+        padding: 10px;
+    }
+
+    .product-image img {
+        max-width: 90%;
+    }
+
+    .pagination-container {
+        width: 100%;
+    }
 }

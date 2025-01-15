@@ -6,7 +6,7 @@
   <div style="padding: 20px;">
     <div style="max-width: 1200px; margin: 0 auto; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 30px;">
        <h1 class="header-title">Оформлення замовлення</h1> <!-- Order processing title -->
-        <div style="display: flex; justify-content: space-between; gap: 20px;">
+        <div class="sc-Bfor">
             <div style="flex: 2;">
               <div>
                 <!-- Google Maps embed for delivery address -->
@@ -65,7 +65,7 @@
                         </div>
                         <div class="price-order-container">
                             <span>Доставка</span>
-                            span><input type="hidden" name="randomNumber" value="{{ $randomNumber }}">{{$randomNumber}}</span>
+                            <span><input type="hidden" name="randomNumber" value="{{ $randomNumber }}">{{$randomNumber}}</span>
                         </div>
                     <div class="price-order-container">
                         <span>До оплати</span>
@@ -116,6 +116,19 @@
 @section('nav')
 <!-- Dropdown for selecting product subcategories -->
 <select name="" id="productSelect">
+    <option value="" disabled selected hidden>Вибрати модель телефону</option>
+    @foreach($categories as $category)
+        <optgroup label="{{ $category->name }}">
+            @foreach($category->subcategories as $subcategory)
+                <option value="{{ route('subcategories.show', $subcategory) }}">{{ $subcategory->name }}</option>
+            @endforeach
+        </optgroup>
+    @endforeach
+</select>
+@endsection
+
+@section('adaptive')
+<select name="" id="productSelectAdapite">
     <option value="" disabled selected hidden>Вибрати модель телефону</option>
     @foreach($categories as $category)
         <optgroup label="{{ $category->name }}">

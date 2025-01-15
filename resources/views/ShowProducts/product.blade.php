@@ -63,17 +63,14 @@
                     <div class="cart--content modal-content">
                         <span class="close">&times;</span> <!-- Close modal button -->
                         <h2>Оформлення покупки</h2> <!-- Purchase processing title -->
-                        <form>
+                        <form class="buy-product-form">
                         <div class="modal-form">
                             <img class="modal-img" src="{{ $product->image }}" alt="Product Image"> <!-- Modal product image -->
-                            <div style=" display: flex; align-items: center; justify-content: space-between; width: 100%;">
                             <div>
+                            <div style=" display: flex; flex-direction: column;">
                                 <h1 class="modal-name">{{ $product->name }}</h1>
+                                <span class="modal-title-price">Сума:</span>
                                 <span class="modal-price">{{ $product->price }} UAH</span> <!-- Modal product price -->
-                            </div>
-                            <div class="modal-section-price">
-                                <span class="modal-title-price">Сума</span>
-                                <span class="modal-price">{{ $product->price }} UAH</span>
                             </div>
                             </div>
                         </div>
@@ -301,7 +298,7 @@
     </div>
 </aside>
 <aside>
-    <div style="width:100%; display: flex; justify-content: center; align-items: center;">
+    <div style=" padding: 20px; width:100%; display: flex; justify-content: center; align-items: center;">
         <div class="wrapp-product__rewievs">
             <div class="top-block-review">
                 <!--  Title displaying the product name and review section  -->
@@ -318,7 +315,7 @@
                     </h2>
                 </div>
             </div>
-            <div style="width: 55%;">
+            <div class="sc-ForRe">
                 <!-- Review submission form -->
                 <form class="form--review" action="{{route('reviews.manage')}}" method="post">
                     @csrf
@@ -390,4 +387,17 @@
                 </optgroup>
             @endforeach
     </select>
+@endsection
+
+@section('adaptive')
+<select name="" id="productSelectAdapite">
+    <option value="" disabled selected hidden>Вибрати модель телефону</option>
+    @foreach($categories as $category)
+        <optgroup label="{{ $category->name }}">
+            @foreach($category->subcategories as $subcategory)
+                <option value="{{ route('subcategories.show', $subcategory) }}">{{ $subcategory->name }}</option>
+            @endforeach
+        </optgroup>
+    @endforeach
+</select>
 @endsection

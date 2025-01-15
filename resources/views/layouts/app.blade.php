@@ -67,7 +67,7 @@
                             </div>    
                             <div class="technique">
                                 <img src="../../../../../assets/images/navigation/phone.png" alt="Phone of choice"> <!-- Phone icon -->
-                                @yield('nav')
+                                @yield('adaptive')
                             </div>
                             <div class="aside-media-content">
                                 <a href="#">

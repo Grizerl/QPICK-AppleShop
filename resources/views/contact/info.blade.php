@@ -14,7 +14,19 @@
         </optgroup>
     @endforeach
 </select>
+@endsection
 
+@section('adaptive')
+<select name="" id="productSelectAdapite">
+    <option value="" disabled selected hidden>Вибрати модель телефону</option>
+    @foreach($categories as $category)
+        <optgroup label="{{ $category->name }}">
+            @foreach($category->subcategories as $subcategory)
+                <option value="{{ route('subcategories.show', $subcategory) }}">{{ $subcategory->name }}</option>
+            @endforeach
+        </optgroup>
+    @endforeach
+</select>
 @endsection
 
 @section('mediaContent')
@@ -36,11 +48,6 @@
             <a class="social-media-item-contact" href="#"><i class="fa-brands fa-instagram fa-inst"></i></a>
             <a class="social-media-item-contact" href="#"><i class="fa-brands fa-telegram fa-tm"></i></a>
             <a class="social-media-item-contact" href="#"><i class="fa-brands fa-viber fa-vib"></i></a>
-        </div>
-    </div>
-    <div class="contact-info">
-        <div style="width:42%"> <!-- Contact info container -->
-            <i class="fa-solid fa-phone"></i> <a href="tel:+380 95 066 29 56">+380 95 066 29 56</a>
         </div>
     </div>
 </section>

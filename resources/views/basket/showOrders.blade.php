@@ -14,7 +14,19 @@
         </optgroup>
     @endforeach
 </select>
+@endsection
 
+@section('adaptive')
+<select name="" id="productSelectAdapite">
+    <option value="" disabled selected hidden>Вибрати модель телефону</option>
+    @foreach($categories as $category)
+        <optgroup label="{{ $category->name }}">
+            @foreach($category->subcategories as $subcategory)
+                <option value="{{ route('subcategories.show', $subcategory) }}">{{ $subcategory->name }}</option>
+            @endforeach
+        </optgroup>
+    @endforeach
+</select>
 @endsection
 
 @section('mediaContent')

@@ -285,6 +285,7 @@ a {
 .sc-nv,.social-media-container {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .mspoiler,.item > a {

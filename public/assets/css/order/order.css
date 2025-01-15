@@ -34,6 +34,12 @@ h1, h2 {
     margin-bottom: 40px;
 }
 
+.sc-Bfor {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px;
+}
+
 /* Map Styling */
 iframe {
     width: 100%;
@@ -169,12 +175,9 @@ button[type="submit"]:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .content {
+@media (max-width: 800px) {
+    .sc-Bfor {
+        display: flex; 
         flex-direction: column;
-    }
-
-    button[type="submit"] {
-        font-size: 1rem;
     }
 }
