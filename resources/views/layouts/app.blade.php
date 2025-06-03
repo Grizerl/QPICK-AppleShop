@@ -164,6 +164,7 @@
         </div>
     </div>
 </footer>
+    </div>
     <!-- JavaScript Files -->
     <script src="/assets/js/productSelect.js"></script> <!-- Product selection script -->
     <script src="/assets/js/swiper.js"></script> <!-- Swiper initialization script -->

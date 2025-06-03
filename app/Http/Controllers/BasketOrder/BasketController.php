@@ -4,17 +4,21 @@ namespace App\Http\Controllers\BasketOrder;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Orders;
-use Illuminate\Http\Request;
+use App\Models\Order;
+use Illuminate\Contracts\View\View;
 
 class BasketController extends Controller
 {
-    public function basket()
+    /**
+     * Summary of basket
+     * @return View
+     */
+    public function basket(): View
     {
         $categories = Category::with('subcategories')->get();
 
-        $orders =Orders::paginate(5);
+        $orders = Order::paginate(5);
 
-        return view('basket.showOrders', compact( 'categories','orders'));
+        return view('basket.showOrders', compact('categories', 'orders'));
     }
 }

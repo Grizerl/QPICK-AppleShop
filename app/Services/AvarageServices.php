@@ -2,15 +2,15 @@
 
 namespace App\Services;
 
-use App\Models\Orders;
+use App\Models\Order;
 
 class AvarageServices
 {
     public function number()
     {
-        $avarage = Orders::count();
-        
-        return ['avarage'=>$avarage,];
+        $avarage = Order::count();
+
+        return ['avarage' => $avarage,];
     }
-    
+
 }

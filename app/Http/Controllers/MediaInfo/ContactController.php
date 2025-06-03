@@ -4,15 +4,18 @@ namespace App\Http\Controllers\MediaInfo;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
 
 class ContactController extends Controller
 {
-    public function contact()
+    /**
+     * Summary of contact
+     * @return View
+     */
+    public function contact(): View
     {
-
         $categories = Category::with('subcategories')->get();
 
-        return view('contact.info',compact('categories'));
+        return view('contact.info', compact('categories'));
     }
 }

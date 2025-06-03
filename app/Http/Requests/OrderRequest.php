@@ -26,11 +26,10 @@ class OrderRequest extends FormRequest
             'city' => 'required|string|max:255',
             'street' => 'required|string|max:255',
             'zipcode' => 'required|max:20',
-            'house' => 'nullable|max:255', 
-            'flat' => 'nullable|max:255', 
+            'house' => 'nullable|max:255',
+            'flat' => 'nullable|max:255',
             'phone' => 'required|numeric',
-            // 'price' =>'required|max:255',
-            'paymentMethod'=>'required',
+            'payment_method' => 'required',
         ];
     }
 }

@@ -6,23 +6,28 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ReviewRequest;
 use App\Models\Category;
 use App\Models\Product;
-use App\Models\review;
+use App\Models\Review;
 use App\Models\Subcategory;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class ApiController extends Controller
 {
-    public function show(Subcategory $subcategory) 
+    /**
+     * Summary of show
+     * @param \App\Models\Subcategory $subcategory
+     * @return JsonResponse|mixed
+     */
+    public function show(Subcategory $subcategory): JsonResponse
     {
- 
+
         $categories = Category::with('subcategories')->get();
-    
+
         $products = $subcategory->products;
-    
+
         if (!$subcategory) {
             return response()->json(['message' => 'Subcategory not found'], 404);
         }
-    
+
         return response()->json([
             'subcategory' => $subcategory,
             'products' => $products,
@@ -30,21 +35,26 @@ class ApiController extends Controller
         ]);
     }
 
-    public function detaile($id)
+    /**
+     * Summary of detaile
+     * @param int $id
+     * @return JsonResponse|mixed
+     */
+    public function detaile(int $id): JsonResponse
     {
 
-        $product=Product::findOrFail($id);
+        $product = Product::findOrFail($id);
 
-        if(!$product) {
-            return response()->json(['message' => 'Product not found'],404);
+        if (!$product) {
+            return response()->json(['message' => 'Product not found'], 404);
         }
 
-        $reviews =review::paginate(3);
+        $reviews = Review::paginate(3);
 
-        if(!$reviews) {
-            return response()->json(['message' => 'Reviews not found for this product'],404);
+        if (!$reviews) {
+            return response()->json(['message' => 'Reviews not found for this product'], 404);
         }
-        
+
         return response()->json([
             'products' => $product,
             'reviews' => $reviews,
@@ -53,11 +63,11 @@ class ApiController extends Controller
 
     public function review(ReviewRequest $request)
     {
-        $validateDate=$request->validated();
+        $validateDate = $request->validated();
 
         $reviews = new review();
-        $reviews->name=$validateDate['name'];
-        $reviews->comment=$validateDate['input_review'];
+        $reviews->name = $validateDate['name'];
+        $reviews->comment = $validateDate['input_review'];
         $reviews->save();
 
         return response()->json(['reviews' => $reviews]);

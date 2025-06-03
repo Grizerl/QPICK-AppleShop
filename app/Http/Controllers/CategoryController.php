@@ -3,17 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Models\Product;
-use App\Models\Subcategory;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
 
 class CategoryController extends Controller
 {
-    public function index()
+    /**
+     * Summary of index
+     * @return View
+     */
+    public function index(): View
     {
         $categories = Category::with('subcategories')->get();
-    
+
         return view('categories.index', compact('categories'));
     }
-  
+
 }

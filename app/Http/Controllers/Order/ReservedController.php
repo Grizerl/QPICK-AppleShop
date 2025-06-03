@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Order;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Orders;
-use Illuminate\Http\Request;
+use App\Models\Order;
 
 class ReservedController extends Controller
 {
@@ -14,8 +13,8 @@ class ReservedController extends Controller
 
         $categories = Category::with('subcategories')->get();
 
-        $order = Orders::find($id);
+        $order = Order::findOrFail($id);
 
-        return view('OrderProduct.reserved', compact('order','categories'));
+        return view('OrderProduct.reserved', compact('order', 'categories'));
     }
 }
